@@ -10,7 +10,7 @@ public class CartPage extends BasePage {
     public static final By CONTINUE_SHOPPING_BUTTON = By.cssSelector(".btn_secondary");
     public static final By NUMBER_OF_ITEMS_IN_THE_CART= By.cssSelector(".cart_quantity");
     public static final By CHECKOUT_BUTTON = By.cssSelector(".btn_action");
-    public static final By CHECKOUT_LABEL = By.cssSelector(".subheader");
+    public static final By CHECKOUT_LABEL = By.cssSelector(".header_secondary_container");
 
     public CartPage(WebDriver driver) {
         super(driver);
@@ -38,7 +38,7 @@ public class CartPage extends BasePage {
     }
 
     public void verificationCheckout () {
-        Assert.assertEquals(driver.findElement(CHECKOUT_LABEL).getText(), "Checkout: Your Information",
+        Assert.assertEquals(driver.findElement(CHECKOUT_LABEL).getText(), "CHECKOUT: YOUR INFORMATION",
                 "Не удалось перейти к оплате");
     }
 }
