@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public abstract class BasePage {
     public static final By ERROR_MESSAGE = By.cssSelector("[data-test=error]");
-    public static final By PRODUCT_LABEL= By.cssSelector(".product_label");
+    public static final By PRODUCT_LABEL= By.xpath("[title=Products]");
     public static final By SHOPPING_CARD = By.id("shopping_cart_container");
     WebDriver driver;
     WebDriverWait wait;
